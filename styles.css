@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url('./static/stars.jpg');
+    color: white;
+    text-align: center;
+    padding: 40px; /* Increased padding for larger header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 2.5em; /* Enlarged font size */
+}
+
+nav {
+    background-image: url('./static/stars.jpg');    
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 15px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; /* Enlarged font size for nav items */
+}
+
+main {
+    background-color: #0c1033;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px; /* Space between content sections */
+}
+
+main .content {
+    padding: 20px;
+    background-color: #b6aeae;
+    border: 1px solid #ccc;
+    width: 50%; /* Half the page width */
+    font-size: 1.2em; /* Enlarged font size for content */
+    flex-grow: 1; /* Ensure content sections grow to fill available space */
+}
+
+footer {
+    background-image: url('./static/stars.jpg');
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px; /* Increased padding to match header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    padding: 10px;
+    font-size: 1.2em; /* Enlarged font size for footer items */
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .content {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

@@ -1,0 +1,136 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'main sidebar'
+        'footer footer';
+    grid-template-columns: 3fr 1fr; /* Main content larger than sidebar */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: #3498db; /* Blue */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.main-content {
+    grid-area: main;
+    background: #ecf0f1; /* Light gray */
+    padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #bdc3c7; /* Medium gray */
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #2980b9; /* Dark blue */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.number {
+    background: #3498db; /* Blue */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #333;
+}
+
+#side-form {
+    background: #3c4ae7; /* Red */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#side-form h3 {
+    margin-top: 0;
+}
+
+#side-form p {
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+div[role="alert"] {
+    color: red;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            'header'
+            'main'
+            'sidebar'
+            'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
